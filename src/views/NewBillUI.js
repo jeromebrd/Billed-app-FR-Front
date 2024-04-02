@@ -1,8 +1,7 @@
-import VerticalLayout from './VerticalLayout.js'
+import VerticalLayout from './VerticalLayout.js';
 
 export default () => {
-
-  return (`
+  return `
     <div class='layout'>
       ${VerticalLayout(120)}
       <div class='content'>
@@ -56,13 +55,14 @@ export default () => {
                   <div class="col-half">
                     <label for="file" class="bold-label">Justificatif</label>
                     <input required type="file" class="form-control blue-border" data-testid="file" />
+                    <p class='error-msg' data-testid='error-msg'>Extension de fichier non autorisée. Veuillez sélectionner un fichier avec une extension jpg, jpeg ou png.</p>
                   </div>
                 </div>
             </div>
             <div class="row">
               <div class="col-md-6">
                 <div class="col-half">
-                  <button type="submit" id='btn-send-bill' class="btn btn-primary">Envoyer</button>
+                  <button type="submit" id='btn-send-bill' data-testid = 'btn-send-bill' class="btn btn-primary">Envoyer</button>
                 </div>
               </div>
             </div>
@@ -70,5 +70,5 @@ export default () => {
         </div>
       </div>
     </div>
-  `)
-}
+  `;
+};
