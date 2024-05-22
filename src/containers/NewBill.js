@@ -27,7 +27,7 @@ export default class NewBill {
     const ext = f.slice(((f.lastIndexOf('.') - 1) >>> 0) + 2).toLowerCase();
     const acceptedFormat = ['jpg', 'png', 'jpeg'];
     if (acceptedFormat.includes(ext)) {
-      this.firestore.storage
+      this.store.storage
         .ref(`justificatifs/${fileName}`)
         .put(file)
         .then((snapshot) => snapshot.ref.getDownloadURL())

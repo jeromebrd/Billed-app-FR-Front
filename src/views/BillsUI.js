@@ -27,6 +27,7 @@ const rows = (data) => {
   const sortByDescDate = (a, b) => (a.date < b.date ? 1 : -1);
   if (data && data.length) {
     const dataSorted = [...data].sort(sortByDescDate);
+    console.log(dataSorted.map((bill) => bill.date));
     return dataSorted.map((bill) => row(bill)).join('');
   }
   return [];

@@ -49,7 +49,7 @@ describe('Given I am connected as an employee', () => {
         .getAllByText(
           /^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$/i
         )
-        .map((a) => a.innerHTML);
+        .map((a) => new Date(a.innerHTML));
       const datesSorted = [...dates].sort((a, b) => b - a);
       expect(dates).toEqual(datesSorted);
     });

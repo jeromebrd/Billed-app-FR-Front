@@ -35,6 +35,7 @@ describe('Given I am connected as an employee', () => {
         firestore,
         localStorage,
       });
+
       //to-do write assertion
 
       const expenseType = screen.getByTestId('expense-type');
